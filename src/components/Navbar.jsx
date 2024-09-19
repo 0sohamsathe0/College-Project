@@ -2,18 +2,21 @@ import React from 'react'
 import { NavLink, Routes, Route, Link } from 'react-router-dom'
 import '../App.css'
 import Home from "./Home.jsx"
-import Account from "./Account.jsx"
+// import Account from "./Account.jsx"
 import Adminlogin from "./Adminlogin.jsx"
-import Certificates from "./Certificates.jsx"
+// import Certificates from "./Certificates.jsx"
 import Logo from '../assets/Logo.png'
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
 import PlayerRegistor from './PlayerRegistor.jsx'
 import PlayerLogin from './PlayerLogin.jsx'
-import MatchesPlayed from './MatchesPlayed.jsx'
-import UpcomingTournaments from './UpcomingTournaments.jsx'
-import PersonalDetails from './PersonalDetails.jsx'
+// import MatchesPlayed from './MatchesPlayed.jsx'
+// import UpcomingTournaments from './UpcomingTournaments.jsx'
+// import PersonalDetails from './PersonalDetails.jsx'
+import AdminProfile from './AdminProfile.jsx'
+import PlayerProfile from './PlayerProfile.jsx'
+import Tournaments from './Tournaments.jsx'
 
 
 
@@ -34,12 +37,14 @@ const Navbar = () => {
 
 
 
-                <div className='links_container hidden md:flex justify-between items-center w-3/5  bg-transparent text-[.7rem] lg:text-lg xl:text-xl font-bold'>
-                    <NavLink to="/" className={({ isActive }) => `${isActive ? "border border-white rounded-md xl:rounded-3xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Home</NavLink>
-                    <NavLink to="admin" className={({ isActive }) => `${isActive ? "border border-white rounded-md xl:rounded-3xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Admin Login</NavLink>
-                    <NavLink to="playerLogin" className={({ isActive }) => `${isActive ? "border border-white rounded-md xl:rounded-3xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Player Login</NavLink>
-                    <NavLink to="playerRegistor" className={({ isActive }) => `${isActive ? "border border-white rounded-md xl:rounded-3xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Player Registor</NavLink>
-                    <NavLink to="account" className={({ isActive }) => `${isActive ? "border border-white rounded-md xl:rounded-3xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Account</NavLink>
+                <div className='links_container hidden md:flex  w-full justify-between items-center  bg-transparent text-[.7rem] lg:text-md xl:text-lg font-bold'>
+                    <NavLink to="/" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Home</NavLink>
+                    <NavLink to="admin" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Admin Login</NavLink>
+                    <NavLink to="playerLogin" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Player Login</NavLink>
+                    <NavLink to="playerRegistor" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Player Registor</NavLink>
+                    <NavLink to="playerprofile" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Player account</NavLink>
+                    <NavLink to="adminprofile" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Admin account</NavLink>
+                    <NavLink to="tournaments" className={({ isActive }) => `${isActive ? "border border-white rounded-sm xl:rounded-xl hover:no-underline px-3 py-2 xl:px-5 xl:py-3" : "text-white"} duration-200 ease-in-out`}>Tournaments</NavLink>
                 </div>
 
 
@@ -71,12 +76,15 @@ const Navbar = () => {
                 <Route path="admin" element={<Adminlogin />} />
                 <Route path='playerLogin' element={<PlayerLogin />} />
                 <Route path='playerRegistor' element={<PlayerRegistor />} />
-                <Route path="account" element={<Account />}>
+                <Route path='adminprofile' element={<AdminProfile />} />
+                {/* <Route path="account" element={<Account />}>
                     <Route index element={<PersonalDetails />} />
                     <Route path='certificates' element={<Certificates />} />
                     <Route path='upcomingTournaments' element={<UpcomingTournaments />} />
                     <Route path="matchesPlayed" element={<MatchesPlayed />} />
-                </Route>
+                    </Route> */}
+                    <Route path='playerprofile' element={<PlayerProfile />} />
+                    <Route path="tournaments" element={<Tournaments />} />
             </Routes>
 
         </>

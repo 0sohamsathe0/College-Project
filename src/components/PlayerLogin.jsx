@@ -65,7 +65,7 @@ const PlayerLogin = () => {
 
     return (
         <>
-            <div className='bg-gradient-to-tl from-blue-800 to-blue-700 h-full pt-24 px-[100px]'>
+ <div className='bg-gradient-to-tl from-blue-800 to-blue-700 h-full pt-24 px-[100px]'>
                 <form method="post" className='bg-white flex justify-between items-between pt-5 px-10 rounded-3xl text-white'>
                     <div className="loginImage w-1/2">
                         <img src={PlayerLoginImage} alt="Login Image" className='w-full' />
@@ -93,7 +93,9 @@ const PlayerLogin = () => {
                     </div>
 
                 </form>
-            </div>
+            </div> 
+
+
         </>
     )
 }

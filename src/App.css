@@ -12,6 +12,9 @@ html {
 
 body {
     position: relative;
+    background: linear-gradient(to top ,rgb(21 101 192 ) ,#1976d2);
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 
@@ -23,9 +26,6 @@ body {
     background-position: center;
     background-size: 100% 100%;
 }
-
-
-
 
 
 
@@ -83,12 +83,7 @@ option {
     cursor: pointer;
 }
 
-.accountPage {
-    background-image: linear-gradient(to top, rgb(19, 126, 249), rgb(0, 106, 255));
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 
 

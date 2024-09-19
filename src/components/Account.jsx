@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Logo from "../assets/Logo.png"
 import "../App.css"
@@ -9,7 +9,11 @@ import { LiaCertificateSolid } from "react-icons/lia";
 import { LuSwords } from "react-icons/lu";
 
 
+
+
 const Account = () => {
+
+    
 
 
     return (
@@ -34,11 +38,10 @@ const Account = () => {
                     <div className='w-[70%] p-5'>
                         <Outlet />
                     </div>
-
-
-
+                    
                 </div>
             </div>
+            
         </>
     )
 }

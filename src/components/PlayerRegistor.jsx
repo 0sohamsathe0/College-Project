@@ -51,7 +51,7 @@ const PlayerRegister = () => {
     data.append("aadharCardPhoto", aadharCardPhoto);
 
     try {
-      console.log("hello");
+      
       const response = await axios.post(
         "http://localhost:3500/players/",
         data,

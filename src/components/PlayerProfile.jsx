@@ -22,7 +22,6 @@ const PlayerProfile = () => {
         "http://localhost:3500/players/all-players"
       );
       setPlayers(response.data);
-      console.log(players);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -69,6 +68,15 @@ const PlayerProfile = () => {
                   <th scope="col" className="px-6 py-3">
                     Actions
                   </th>
+                  <th scope="col" className="px-6 py-3">
+                    <select name="Event" id="">
+                      <option value="">Event</option>
+                      <option value="Epee">Epee</option>{" "}
+                      <option value="Foil">Foil</option>{" "}
+                      <option value="Foil">Sabre</option>{" "}
+                    </select>
+                  </th>
+                  <th scope="col" className="px-6 py-3">DOB</th>
                 </tr>
               </thead>
               <tbody>
@@ -78,7 +86,7 @@ const PlayerProfile = () => {
                       key={player.pid}
                       className="bg-white border-b  hover:bg-gray-50 "
                     >
-                      <td className="px-6 py-4 text-black">{player.pid}</td>
+                      <td className="px-6 py-4 text-black">SFA {player.pid}</td>
                       <td className="px-6 py-4">{player.fullName}</td>
                       <td className="px-6 py-4">
                         <button
@@ -88,6 +96,8 @@ const PlayerProfile = () => {
                           Show Profile
                         </button>
                       </td>
+                      <td className="px-6 py-4">{player.eventName}</td>
+                      <td className="px-6 py-4">{player.dob}</td>
                     </tr>
                   ))
                 ) : (
@@ -134,14 +144,15 @@ const PlayerProfile = () => {
                         </div>
                       </div>
                     </div>
-                    <Certificates meritCertificate={meritCertificate} participationCertificate={participationCertificate}/>
+                    <Certificates
+                      meritCertificate={meritCertificate}
+                      participationCertificate={participationCertificate}
+                    />
                   </div>
                 );
               })
             ) : (
-              <div>
-                
-              </div>
+              <div></div>
             )}
           </div>
         </div>
